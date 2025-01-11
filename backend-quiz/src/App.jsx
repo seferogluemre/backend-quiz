@@ -10,8 +10,6 @@ function App() {
 
   const [selectedImage, setSelectedImage] = useState(0);
 
-
-
   const cards = [
     { id: 1, name: '1-3', image: () => <Activity /> },
     { id: 2, name: '4-18', image: () => <Aperture /> },
@@ -19,14 +17,15 @@ function App() {
     { id: 4, name: '36-46', image: () => <CPU /> }
   ]
 
-
-
+  const questionPhotos = [
+    { id: 1, photoSrc: "/src/assets/components/questionPhotos/cevap1.png" },
+  ]
 
   return (
     <>
       <div className="app">
+        <h2>Y.Emre SEFEROĞLU</h2>
         <h1>Backend Quiz 1-46</h1>
-
         <div className="gallery">
           {cards.map((card) => (
             <div
@@ -41,9 +40,8 @@ function App() {
             </div>
           ))}
         </div>
-
       </div>
-      {/* {
+      {
         questionPhotos.map((question, index) => {
           if (question.id == selectedImage) {
             return (
@@ -60,8 +58,7 @@ function App() {
             )
           }
         })
-      } */}
-
+      }
     </>
   )
 }
